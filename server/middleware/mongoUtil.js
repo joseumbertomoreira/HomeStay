@@ -14,15 +14,23 @@ module.exports = () => {
             console.log("Connected correctly to server");
             const db = connection.db(dbName);
             context.collection = db.collection('host');
-            return next();
+            next();
         }catch(err){
             console.log(err.stack);
         }
     },
     mongodb.getCollection = async (context, next) => {
-        const arrayCollection = await context.collection.find().toArray();
-        console.log('coll', arrayCollection);
+        try{
+            const arrayCollection = await context.collection.find().toArray();
+            console.log('arrayCollection', typeof(arrayCollection));
+            context.hostsList = arrayCollection;
+            //console.log('context', context.hostsList)
+            next()
+        }catch(err){
+            console.log(err.stack);
+        }
     }
+
     return mongodb;
 
 }

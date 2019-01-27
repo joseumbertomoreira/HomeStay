@@ -1,0 +1,27 @@
+{
+  "name": "homestayserver",
+  "version": "1.0.0",
+  "description": "hospitality app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joseumbertomoreira/HomeStay.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joseumbertomoreira/HomeStay/issues"
+  },
+  "homepage": "https://github.com/joseumbertomoreira/HomeStay#readme",
+  "dependencies": {
+    "consign": "^0.1.6",
+    "express": "^4.16.4",
+    "middleware-chain": "^1.0.1",
+    "mongodb": "^3.1.13",
+    "mongoose": "^5.4.7"
+  }
+}

@@ -3,7 +3,7 @@ module.exports = (app) => {
     
     hosts.list = (context, next) => {
         app.get('/hosts', (request, response)=>{
-            response.send(context.hostsList)
+            response.send(context.hostsList)            
         });
     }
 

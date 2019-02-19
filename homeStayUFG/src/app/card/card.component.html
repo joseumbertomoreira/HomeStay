@@ -1,6 +1,6 @@
 <div class="container">  
   <div class="row">
-    <div *ngFor="let host of hosts" class="card col-6 offset-3 m-4">
+    <div *ngFor="let host of hosts" class="card col-6 offset-3 my-4">
       <div class="card-header">
         <img class="card-img-top rounded mx-auto d-block" [src]="host.ProfilePhoto" alt="Card image cap" style="max-width: 25%; max-height: 10%">
       </div>
@@ -12,19 +12,3 @@
     </div>
   </div>  
 </div>
-
-<!--
-  m-4 ignora o offset-3 e mantem o tamanho da imagem.
-<div class="container">
-  <div class="row">
-    <div class="card col-6 offset-3 " style="width: 18rem;">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </div>
-</div>
--->

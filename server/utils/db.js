@@ -20,25 +20,21 @@ let getDb = async ()=> {
 }
 
 let getCollection = async ()=> {
-    /*
-    (async ()=>{
-        try{            
-            let col = await _db.collection('host')
-            const hosts = await col.find({}).toArray();
-            console.log('host', hosts)
-            console.log("HOSTS", typeof(hosts))
-            return hostsList;
-        } catch(e){
-            console.log("Erro!", e)
-        }
-    })()
-    */
     try{            
         let col = await _db.collection('host')
         const hosts = await col.find({}).toArray();
         return hosts;
     } catch(e){
         console.log("Erro!", e)
+    }
+}
+
+let getHost = async()=>{
+    try{
+        let col = await _db.collection('host');
+        let host = await col.find({})
+    } catch(e){
+
     }
 }
 

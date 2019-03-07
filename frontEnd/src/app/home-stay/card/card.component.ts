@@ -18,7 +18,7 @@ export class CardComponent implements OnInit {
   lng: number = 7.809007;
   zoom: number;
 
-  hosts: Object[] = [];
+  hosts: any[] = [];
 
   constructor(homestayservice: HomestayhttpService) { 
     

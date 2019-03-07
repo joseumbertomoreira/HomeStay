@@ -11,7 +11,7 @@ import { HomestayhttpService } from '../homestayhttp.service';
 })
 export class HostProfileComponent implements OnInit {
 
-  private host: Object = {};
+  private host: any = {};
   latitude: number;
   longitude: number;
   zoom: number

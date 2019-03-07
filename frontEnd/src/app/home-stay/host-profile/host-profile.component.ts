@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { AgmCoreModule } from '@agm/core';
 
 import { HomestayhttpService } from '../homestayhttp.service';
 
@@ -11,18 +12,23 @@ import { HomestayhttpService } from '../homestayhttp.service';
 export class HostProfileComponent implements OnInit {
 
   private host: Object = {};
+  latitude: number;
+  longitude: number;
+  zoom: number
 
-  constructor(private homestayservice: HomestayhttpService, private activatedRoute: ActivatedRoute) {
-    const name = this.activatedRoute.snapshot.params.name;
-    this.homestayservice.
-      host(name).subscribe((hostFromServer) => {
-        this.host = hostFromServer
-      });
-    console.log(name); 
-   }
+  constructor(private activatedRoute: ActivatedRoute) {}
 
 
   ngOnInit() {
+    this.host = this.activatedRoute.snapshot.data.host;
+    this.host.address.forEach(element => {
+      if(element.label == 'Minha casa'){
+        this.latitude = element.lat;
+        this.longitude = element.lng;
+        this.zoom = element.zoom;
+      }
+    });
+    console.log('host', this.host)
   }
 
 }

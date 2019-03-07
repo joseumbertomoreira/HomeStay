@@ -1,4 +1,5 @@
 const MongoClient = require('mongodb').MongoClient;
+const mongo = require('mongodb')
 const url = 'mongodb://localhost:27017';
 const dbName = 'HomeStay';
 
@@ -29,17 +30,20 @@ let getCollection = async ()=> {
     }
 }
 
-let getHost = async()=>{
+let oneHost = async(id)=>{
     try{
         let col = await _db.collection('host');
-        let host = await col.find({})
+        var o_id = new mongo.ObjectID(id);
+        let host = await col.findOne({ "_id": o_id })
+        return host;
     } catch(e){
-
+        console.log("Erro!", e)
     }
 }
 
 module.exports = {
     init,
     getDb,
-    getCollection
+    getCollection,
+    oneHost
 }

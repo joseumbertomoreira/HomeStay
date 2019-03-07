@@ -11,8 +11,11 @@ router.get('/', async function(req, res){
 });
 
 router.get('/user/host/:name', async (req, res)=>{
-    console.log('adrara', req.params)
-    res.send('arararar')
+    res.set('Content-Type', 'application/json');
+    res.set('Access-Control-Allow-Origin', '*')
+    let id = req.params.name;
+    let host = await hosts.getHost(id);
+    res.send(host)
 })
 
 module.exports = router;

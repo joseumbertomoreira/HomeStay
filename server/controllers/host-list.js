@@ -5,6 +5,12 @@ let getList = async () =>{
     return list;
 }
 
+let getHost = async (id) =>{
+    let host = await database.oneHost(id)
+    return host;
+}
+
 module.exports = {
-    getList
+    getList,
+    getHost
 }

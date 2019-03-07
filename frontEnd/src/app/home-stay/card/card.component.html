@@ -2,7 +2,7 @@
   <app-navbar></app-navbar> 
   <div class="row mt-4" *ngFor="let host of hosts">
     <div class="col-8 offset-2 border rounded">
-      <div class="row">
+      <div class="row mb-2">
           <div class="col-4">
               <div class="d-flex justify-content-center">
                 <img [src]="host.profilePhoto" alt="" class="img-thumbnail my-2 justify-content-center" style="height: 180px">
@@ -14,13 +14,13 @@
                 <span>{{host.About}}</span>                  
               </div>
               <div class="d-flex justify-content-center">
-                <a class="btn btn-primary" routerLink="/user/host/{{host.Name}}" routerLinkActive="active">Crisis Center</a>
+                <a class="btn btn-primary" routerLink="/user/host/{{host._id}}" routerLinkActive="active">Perfil</a>
               </div>
           </div>
           <div class="col-8">
             <div class="mt-2">
-              <agm-map [latitude]="host.address.lat" [longitude]="host.address.lng">
-                <agm-marker [latitude]="host.address.lat" [longitude]="host.address.lng"></agm-marker>
+              <agm-map [zoom]="zoom" [latitude]="lat" [longitude]="lng">
+                <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
               </agm-map>
             </div>
           </div>

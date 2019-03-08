@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Host } from '../models/host';
 
 @Injectable({
   providedIn: 'root'
@@ -11,12 +12,12 @@ export class HomestayhttpService {
   
   hostList() {
     return this.http
-      .get<Object[]>(this.API);
+      .get<Host[]>(this.API);
   }
 
   host(name: string){
     return this.http
-      .get<Object[]>(this.API+ "user/host/" + name);
+      .get<Host[]>(this.API+ "user/host/" + name);
   }
 
 }

@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from "@angular/router";
 
-import { MainComponent } from './main/main.component';
-import { HostProfileComponent } from './host-profile/host-profile.component';
-import { CardComponent } from './card/card.component';
-import { HomeStayResolver } from './home-stay.resolver';
+import { MainComponent } from '../main/main.component';
+import { HostProfileComponent } from '../host-profile/host-profile.component';
+import { CardComponent } from '../card/card.component';
+import { HomeStayResolver } from '../resolver/home-stay.resolver';
 
 const homeStayRoutes: Routes = [
   { path: '', component: MainComponent },

@@ -2,10 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { AgmCoreModule } from '@agm/core';
 import { HttpClient } from '@angular/common/http';
 
-import { Host } from './host';
-import { HOSTS } from './host-list';
-import { HomestayhttpService } from '../homestayhttp.service';
-import { element } from '@angular/core/src/render3/instructions';
+import { HomestayhttpService } from '../services/homestayhttp.service';
+import { Host } from '../models/host';
 
 @Component({
   selector: 'app-card',
@@ -18,7 +16,7 @@ export class CardComponent implements OnInit {
   lng: number = 7.809007;
   zoom: number;
 
-  hosts: any[] = [];
+  hosts: Host[] = [];
 
   constructor(homestayservice: HomestayhttpService) { 
     
@@ -26,6 +24,7 @@ export class CardComponent implements OnInit {
       .hostList()
         .subscribe((hostList) => {
           this.hosts = hostList
+          console.log(hostList)
           this.hosts.forEach(element=>{
             console.log(this.hosts)
             for(let i = 0; i < element.address.length; i++){

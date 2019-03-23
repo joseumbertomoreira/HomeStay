@@ -20,6 +20,7 @@ export class HostProfileComponent implements OnInit {
   lng1: number = -49.267022;
   lat2: number = -16.60201;
   lng2: number = -49.263196;
+  public renderOptions: any;
   
 
   constructor(private activatedRoute: ActivatedRoute) {}
@@ -27,6 +28,9 @@ export class HostProfileComponent implements OnInit {
   distance(): void{
     this.minhaCasa = { lat: this.lat1, lng: this.lng1 };
     this.ufg = { lat: this.lat2, lng: this.lng2 };
+    this.renderOptions = {
+      suppressMarkers: true,
+    }
     /*
     this.minhaCasa = new google.maps.LatLng(-16.68471, -49.267022)
     this.ufg = new google.maps.LatLng(-16.60201, -49.263196)

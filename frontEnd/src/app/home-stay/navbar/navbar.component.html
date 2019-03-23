@@ -1,27 +1,32 @@
-<div class="row mt-4">
-    <div class="btn-group btn-group-toggle offset-9 col-1" data-toggle="buttons">
-        <label class="btn btn-success btn-sm">
-            <input type="radio" name="options" id="option1" autocomplete="off" checked> Portuguese
-        </label>
-        <label class="btn btn-danger btn-sm">
-            <input type="radio" name="options" id="option2" autocomplete="off"> English
-        </label>        
+<nav class="navbar navbar-expand-xl navbar-dark bg-primary" role="navigation">
+    <a class="navbar-brand" href="#">HomeStay</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <a class="navbar-brand" href="#"></a>
+        <form class="form-inline ml-auto">
+            <div class="dropdown">
+                <button class="btn btn-light dropdown-toggle mb-1 mr-sm-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Português
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Inglês</a>
+                    <a class="dropdown-item" href="#">Espanhol</a>            
+                </div>
+            </div>
+        </form>
+        <ul class="navbar-nav">
+            <li>
+                <button class="btn btn-light mb-1 mr-sm-2">
+                    Registre-se
+                </button>
+            </li>
+            <li>
+                <button class="btn btn-light mb-1">
+                    Entrar
+                </button>
+            </li>
+        </ul>
     </div>
-</div>
-<div class="row mt-1">
-    <nav class="navbar navbar-dark bg-primary navbar-expand-lg col-10 offset-1 rounded" role="navigation">
-        <a class="navbar-brand" href="#">HomeStay</a>        
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav mr-auto">                
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Menu
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/host-list">Hosts</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </nav>
-</div>
+</nav>

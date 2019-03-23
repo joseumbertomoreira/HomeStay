@@ -95,12 +95,8 @@
             <h4 class="mb-3">Mapa</h4>
             <div class="row mx-1">
                 <div class="col-12 mt-2">
-                    <agm-map [zoom]="host.zoom" [latitude]="latitude" [longitude]="longitude">
-                        <agm-marker *ngFor="let m of host.address"
-                            [latitude]="m.lat"
-                            [longitude]="m.lng"
-                        >                            
-                        </agm-marker>
+                    <agm-map [zoom]="host.zoom" [latitude]="latitude" [longitude]="longitude">                           
+                        
                         <agm-direction [origin]="minhaCasa" [destination]="ufg">
                         </agm-direction>
                     </agm-map>
